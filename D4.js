@@ -153,12 +153,15 @@ console.log(cutString('Goodbye'))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-const giveMeRandom = function (n) {
-    const arrayRandom = []
-    arrayRandom.push(0,1,2,3,4,5,6,7,8,9,10)
-    const randomElement = Math.floor(Math.random() * arrayRandom.length);
-    const randomNumbers = arrayRandom[randomElement]
-    return randomNumbers
-}
-// testo la funzione
-console.log(giveMeRandom(7))
+function giveMeRandom(n) {
+    const randomNumbers = [];
+  
+    for (let i = 0; i < n; i++) {
+      const randomNumber = Math.floor(Math.random() * 11); // Genera un numero casuale tra 0 e 10
+      randomNumbers.push(randomNumber);
+    }
+    return randomNumbers;
+  }
+  
+  const result = giveMeRandom(5);
+  console.log(result);
